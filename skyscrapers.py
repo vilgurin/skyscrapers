@@ -40,12 +40,15 @@ def left_to_right_check(input_line: str, pivot: int):
     max_difference = 0
     counter = 1
     max_difference = int(input_line[1]) - int(input_line[2])
+
     for i in range(1,len(input_line)):
         if int(input_line[i])-int(input_line[2])> max_difference:
             max_difference = int(input_line[i])-int(input_line[2])
             counter += 1 
+
     if counter == int(pivot):
         return True
+        
     return False
 
 
@@ -165,16 +168,21 @@ def check_columns(board: list):
 
     for i in range(len(board[-1])):
         if board[-1][i].isdigit() == True:
+
             for elem in board[1:]:
                 vertical_list.append(elem[i])
             vertical_list = "".join(vertical_list)
             vertical_list = vertical_list[::-1]
+
             for i in vertical_list[1:-1]:
                 if vertical_list[1:-1].count(i) > 1:
                     return False
+
             if left_to_right_check(vertical_list,vertical_list[0]) == False:
                 return False
+
             vertical_list = []
+
     return True
 
 
@@ -187,6 +195,7 @@ def check_skyscrapers(input_path: str):
     """
 
     board = read_input(input_path)
+
     check_horizontal = check_horizontal_visibility(board)
     check_column = check_columns(board)
     check_finished_board = check_not_finished_board(board)
