@@ -2,7 +2,6 @@
 This module contains functions
 https://github.com/vilgurin/skyscrapers
 '''
-import doctest
 def read_input(path: str):
 
     """
