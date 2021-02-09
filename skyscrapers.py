@@ -1,5 +1,6 @@
 '''
 This module contains functions
+https://github.com/vilgurin/skyscrapers
 '''
 import doctest
 def read_input(path: str):
@@ -48,7 +49,7 @@ def left_to_right_check(input_line: str, pivot: int):
 
     if counter == int(pivot):
         return True
-        
+
     return False
 
 
