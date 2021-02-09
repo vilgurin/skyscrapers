@@ -177,7 +177,6 @@ def check_columns(board: list):
             vertical_list = []
     return True
 
-# print(check_columns(['***21**', '412453*', '423145*', '*543215', '*35214*', '*41532*', '*2*1***']))
 
 def check_skyscrapers(input_path: str):
 
@@ -198,4 +197,3 @@ def check_skyscrapers(input_path: str):
         return True
 
     return False
-
